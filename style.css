@@ -1,0 +1,39 @@
+.filter {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.filter-btns {
+   display: flex;
+   justify-content: center;
+}
+
+.filter-btns__item {
+   margin: 10px;
+}
+
+.filter-content {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.filter-content img {
+   margin: 5px;
+}
+
+.active {
+   text-decoration: underline;
+}
+
+@media (max-width: 425px) {
+   .filter-btns .filter-btns__item {
+      display: none;
+   }
+}
+
+@media (min-width: 426px) {
+   .filter-btns select{
+      display: none;
+   }
+}
