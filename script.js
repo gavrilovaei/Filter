@@ -18,15 +18,16 @@ function filterImages(sel) {
       if (img.classList.contains(sel)) {
          img.style.display = "block";
       };
+   };
 
-      for (let btn of btns) {
-         if (btn.dataset.filter === sel) {
-            btn.classList.add('active');
-         } else {
-            btn.classList.remove('active');
-         };
+   for (let btn of btns) {
+      if (btn.dataset.filter === sel) {
+         btn.classList.add('active');
+      } else {
+         btn.classList.remove('active');
       };
    };
+   
    select.value = sel;
 };
 // функция, запускающаяся по клику на кнопку будет обходить коллекцию изображений и проверять есть ли у изображения конкретный класс. У classList есть свойство contains, которое принимает конккретный класс и возвращает либо trye либо fals, в зависимости от того есть ли этот класс у элемента. Так же нужно перебрать все кнопки, для них тоже запустить проверку: убрать активный класс если нет класса соответствующего полученному sel, в противном случае активный класс добавить.
